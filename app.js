@@ -1,1 +1,1 @@
-console.log("woo")
+const modal = document.querySelector()
