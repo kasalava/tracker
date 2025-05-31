@@ -47,6 +47,7 @@ background: #fbfbfb;
     background: #fff;
     border-radius: var(--radius);
     border: var(--border);
+    transition: .4s box-shadow; /*анимация 4с по св-ву бокс шэдоу*/
 }
 
 .card.done {
