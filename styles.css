@@ -1,5 +1,59 @@
-:root { /* */
-    --green: #73ba3c;
-    --orange: #f99415;
-    --red: 
+:root {/*базовые переменные*/
+  --green: #73ba3c;
+  --orange: #f99415;
+  --red: #e75a5a;
+  --border: 1px splid rgba(151, 158, 162, 0.3); /*прозрачность 30 проц.*/
+  --radius: 6px;
+  --border-color: rgba(151, 158, 162, 0.3);
+}
+*{/*стилистика для всех документов*/
+margin:0;
+padding:0;
+box-sizing: border-box;
+}
+
+body {
+font-family: 'Roboto', sans-serif;
+background: #fbfbfb;
+}
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 2rem 1rem
+}
+
+.heading {
+    margin-bottom: 1rem; 
+}
+
+.row {
+    display: flex; /*выравнивает в одну линию*/
+    flex-wrap: wrap; /*если ширина больше родительского контейнера, карточки переносятся на другую строчку*/
+    margin-right: -1rem;
+    }
+
+.card {
+    width: calc(960px / 3);
+    flex-grow: 1;
+    margin-bottom: 1rem;
+    margin-right: 1rem;
+}
+.card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    background: #fff;
+    border-radius: var(--radius);
+    border: var(--border);
+}
+
+.card.done {
+    background: var(--green);
+    color: #fff;
+    }
+
+.card:hover {/*выравнивает в одну линию*/
+    cursor: pointer
 }
