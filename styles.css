@@ -1,4 +1,5 @@
-:root {/*базовые переменные*/
+:root {
+  /*базовые переменные*/
   --green: #73ba3c;
   --orange: #f99415;
   --red: #e75a5a;
@@ -6,110 +7,200 @@
   --radius: 6px;
   --border-color: rgba(151, 158, 162, 0.3);
 }
-*{/*стилистика для всех документов*/
-margin:0;
-padding:0;
-box-sizing: border-box;
+* {
+  /*стилистика для всех документов*/
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-font-family: 'Roboto', sans-serif;
-background: #fbfbfb;
+  font-family: "Roboto", sans-serif;
+  background: #fbfbfb;
 }
 
 .container {
-    max-width: 960px;
-    margin: 0 auto;
-    padding: 2rem 1rem
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
 }
 
 .heading {
-    margin-bottom: 1rem; 
+  margin-bottom: 1rem;
 }
 
 .row {
-    display: flex; /*выравнивает в одну линию*/
-    flex-wrap: wrap; /*если ширина больше родительского контейнера, карточки переносятся на другую строчку*/
-    margin-right: -1rem;
-    }
+  display: flex; /*выравнивает в одну линию*/
+  flex-wrap: wrap; /*если ширина больше родительского контейнера, карточки переносятся на другую строчку*/
+  margin-right: -1rem;
+}
 
 .card {
-    width: calc(960px / 3);
-    flex-grow: 1;
-    margin-bottom: 1rem;
-    margin-right: 1rem;
+  width: calc(960px / 3);
+  flex-grow: 1;
+  margin-bottom: 1rem;
+  margin-right: 1rem;
 }
 .card {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 2rem;
-    background: #fff;
-    border-radius: var(--radius);
-    border: var(--border);
-    transition: .4s box-shadow; /*анимация 4с по св-ву бокс шэдоу*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  background: #fff;
+  border-radius: var(--radius);
+  border: var(--border);
+  transition: 0.4s box-shadow; /*анимация 4с по св-ву бокс шэдоу*/
 }
 
 .card.done {
-    background: var(--green);
-    color: #fff;
-    }
+  background: var(--green);
+  color: #fff;
+}
 
-.card:hover {/*выравнивает в одну линию*/
-    cursor: pointer;
-    box-shadow: 4px  4px  8px rgba(0,0,0, .22);/*прозрачность 22 проц*/
+.card:hover {
+  /*выравнивает в одну линию*/
+  cursor: pointer;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.22); /*прозрачность 22 проц*/
 }
 
 .progress {
-    margin: 0 auto 1 rem;
+  margin: 0 auto 1 rem;
 }
 
 .progress-bar {
-    position: relative; /*для правильного позиционирования*/
-    left: 0;
-    right: 0;
-    height: 0;
-    border: var(--border);
-    border-radius: var(--radius);
-    background: #f5f5f4;
+  position: relative; /*для правильного позиционирования*/
+  left: 0;
+  right: 0;
+  height: 0;
+  border: var(--border);
+  border-radius: var(--radius);
+  background: #f5f5f4;
 }
 
 .progress-value {
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    top: 0;
-    background: var(--orange);
-    color: #fff;
-    display: flex; /*выравниваем по центру элемент (40 проц)*/
-    justify-content: center; /*выравниваем по центру элемент (40 проц)*/
-    align-items: center;  /*выравниваем по центру элемент (40 проц)*/
-    border-radius: var(--radius);
-    transition: .5s width;
-    width: 40%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  top: 0;
+  background: var(--orange);
+  color: #fff;
+  display: flex; /*выравниваем по центру элемент (40 проц)*/
+  justify-content: center; /*выравниваем по центру элемент (40 проц)*/
+  align-items: center; /*выравниваем по центру элемент (40 проц)*/
+  border-radius: var(--radius);
+  transition: 0.5s width;
+  width: 40%;
 }
 
 .empty {
-    margin-bottom: 2rem;
-    color: grey;
+  margin-bottom: 2rem;
+  color: grey;
 }
 
 .form-control label {
-font-size: 14px;
-display: block;
-margin-bottom: .5rem;
+  font-size: 14px;
+  display: block;
+  margin-bottom: 0.5rem;
 }
 
 .form-control input,
 .form-control textarea {
-    display: block;
-    width: 50%;
-    border: var(--border);
-    resize: none;
-    padding: 75rem;
-    margin-bottom: 1rem;
-    border-radius: var(--radius);
-    background: #f7f7f7;
-    font-family: inherit; /*шрифт будет унаследован от вышестояших элементов */
-    outline: none; /*выделение синим убрали */
+  display: block;
+  width: 50%;
+  border: var(--border);
+  resize: none;
+  padding: 75rem;
+  margin-bottom: 1rem;
+  border-radius: var(--radius);
+  background: #f7f7f7;
+  font-family: inherit; /*шрифт будет унаследован от вышестояших элементов */
+  outline: none; /*выделение синим убрали */
+  transition: 0.22s background; /*анимация на св-во бэкграунд*/
 }
+
+.form-control input:focus,
+.form-control textarea:focus {
+  background: #fff;
+}
+
+.form-control input.invalid,
+.form-control textarea {
+  animation: validate 2s;
+}
+
+@keyframes validate {
+  /*три состояния анимации*/
+  0% {
+    boder: 1px solid var(--red);
+  }
+
+  50% {
+    boder: 1px solid var(--red);
+  }
+
+  100% {
+    boder: cc;
+  }
+}
+
+.btn {
+  font-family: inherit;
+  padding: 0.7rem 2rem;
+  border: var(--border);
+  background: #f7f7f7;
+  border-radius: var(--radius);
+  transition: 0.3s background;
+}
+
+.btn:hover {
+  background: #fff;
+  cursor: pointer;
+}
+
+.modal {
+  display: none;
+}
+
+.modal.opem {
+  /*если у модала, есть класс опуен*/
+  display: block;
+  position: fixed;
+  top: 50px;
+  background: #fff;
+  width: 500px;
+  left: 50%;
+  transform: translateX(-50%); /*элемент по центру экрана*/
+  z-index: 200; /*показывает на каком слое лежит можельное окно*/
+  padding: 1.5rem;
+  border-radius: var(--radius);
+}
+
+.modal h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.modal p{
+    margin-bottom: 1rem;
+    }
+
+.modal hr{
+    margin-bottom: 1rem;
+    border: none;
+    height: 2px;
+    background: var(--border-color);
+    }
+.modal.open + .modal-backdrop{
+    display: block;
+}
+
+    .modal-backdrop{
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0,0,0,.5);
+           }
+
