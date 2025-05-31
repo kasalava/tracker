@@ -55,5 +55,6 @@ background: #fbfbfb;
     }
 
 .card:hover {/*выравнивает в одну линию*/
-    cursor: pointer
+    cursor: pointer;
+    box-shadow: 4px  4px  8px rgba(0,0,0, .22);/*прозрачность 22 проц*/
 }
