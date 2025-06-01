@@ -194,7 +194,7 @@ body {
     display: block;
 }
 
-    .modal-backdrop{
+.modal-backdrop {
         display: none;
         position: fixed;
         top: 0;
