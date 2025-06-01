@@ -109,7 +109,7 @@ body {
   width: 50%;
   border: var(--border);
   resize: none;
-  padding: 75rem;
+  padding: .75rem;
   margin-bottom: 1rem;
   border-radius: var(--radius);
   background: #f7f7f7;
